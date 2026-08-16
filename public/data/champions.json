@@ -1,0 +1,15 @@
+[
+  {"year":2012,"champion":"Eddie","runnerUp":"Preston","third":"Randall","teams":12},
+  {"year":2013,"champion":"Steve L.","runnerUp":"Randall","third":"H.A.M.","teams":12},
+  {"year":2015,"champion":"Oliver","runnerUp":"Andrew","third":"Eric Chow","teams":12},
+  {"year":2016,"champion":"Oliver","runnerUp":"Jane","third":"Vivian","teams":12},
+  {"year":2017,"champion":"Eddie","runnerUp":"Jane","third":"Markus","teams":12},
+  {"year":2018,"champion":"Vivian","runnerUp":"Jason R.","third":"Jane","teams":12},
+  {"year":2019,"champion":"Jason R.","runnerUp":"Rich","third":"Eddie","teams":12},
+  {"year":2020,"champion":"Eddie","runnerUp":"Ryan","third":"Eric Lew","teams":12},
+  {"year":2021,"champion":"Tuan","runnerUp":"Eric Lew","third":"Ryan","teams":12},
+  {"year":2022,"champion":"Mars","runnerUp":"Jane/Ryan","third":"Markus","teams":10},
+  {"year":2023,"champion":"Eddie","runnerUp":"Jane/Ryan","third":"Eric Lew","teams":10},
+  {"year":2024,"champion":"Eric Lew","runnerUp":"Tuan","third":"Mars","teams":10},
+  {"year":2025,"champion":"Eric Lew","runnerUp":"Vivian","third":"Mars","teams":12}
+]

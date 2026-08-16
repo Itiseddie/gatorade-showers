@@ -1,0 +1,151 @@
+Year,Pick #,Manager,Player Drafted,FAAB Remaining
+2025,1,Rich,Ja'Marr Chase,32
+2025,2,Vivian,Bijan Robinson,0
+2025,3,Eric Chow,Saquon Barkley,15
+2025,4,Mars,Justin Jefferson,50
+2025,5,Ryan,CeeDee Lamb,0
+2025,6,Eddie,Nico Collins,61
+2025,7,Emily,Tyreek Hill,19
+2025,8,Markus,Derrick Henry,100
+2025,9,Eric Lew,Christian McCaffrey,55
+2025,10,Randall,Amon-Ra St. Brown,85
+2025,11,Tuan,Ashton Jeanty,100
+2025,12,Jane,Malik Nabers,3
+2024,1,Tuan,Christian McCaffrey,20
+2024,2,Ryan,Tyreek Hill,14
+2024,3,Mars,Bijan Robinson,0
+2024,4,Jane,Justin Jefferson,40
+2024,5,Eric Chow,Amon-Ra St. Brown,0
+2024,6,Rich,CeeDee Lamb,19
+2024,7,Eric Lew,Ja'Marr Chase,1
+2024,8,Eddie,Garrett Wilson,26
+2024,9,Vivian,Kyren Williams,12
+2024,10,Markus,A.J. Brown,35
+2023,1,Jane/Ryan,Justin Jefferson,0
+2023,2,Tuan,Bijan Robinson,13
+2023,3,Markus,Ja'Marr Chase,38
+2023,4,Eric Lew,Christian McCaffrey,100
+2023,5,Eddie,Tyreek Hill,4
+2023,6,Eric Chow,Austin Ekeler,0
+2023,7,Mars,Travis Kelce,99
+2023,8,Rich,Stefon Diggs,0
+2023,9,Vivian,A.J. Brown,17
+2023,10,Emily,Nick Chubb,23
+2022,1,Jane/Ryan,Jonathan Taylor,0
+2022,2,Rich,Christian McCaffrey,1
+2022,3,Markus,Justin Jefferson,75
+2022,4,Mars,Derrick Henry,36
+2022,5,Tuan,Cooper Kupp,100
+2022,6,Vivian,Dalvin Cook,44
+2022,7,Eddie,Austin Ekeler,37
+2022,8,Emily,Ja'Marr Chase,76
+2022,9,Eric Chow,Joe Mixon,1
+2022,10,Eric Lew,Stefon Diggs,80
+2021,1,Eric Chow,Christian McCaffrey,72
+2021,2,Rich,Dalvin Cook,0
+2021,3,Jane,Derrick Henry,2
+2021,4,Vivian,Alvin Kamara,25
+2021,5,Jeremy,Ezekiel Elliott,90
+2021,6,Jason R.,Nick Chubb,100
+2021,7,Markus,Saquon Barkley,95
+2021,8,Tuan,Davante Adams,95
+2021,9,Eddie,Aaron Jones Sr.,0
+2021,10,Emily,Tyreek Hill,96
+2021,11,Ryan,Travis Kelce,0
+2021,12,Eric Lew,Austin Ekeler,45
+2020,1,Ryan,Christian McCaffrey,25
+2020,2,Vivian,Saquon Barkley,24
+2020,3,Rich,Ezekiel Elliott,0
+2020,4,Eric Chow,Alvin Kamara,97
+2020,5,Jaymond,Michael Thomas,83
+2020,6,Eddie,Dalvin Cook,47
+2020,7,Tuan,Clyde Edwards-Helaire,100
+2020,8,Emily,Derrick Henry,52
+2020,9,Jane,Davante Adams,47
+2020,10,Eric Lew,Tyreek Hill,30
+2020,11,Markus,Nick Chubb,35
+2020,12,Jason R.,Joe Mixon,100
+2019,1,Ryan,Saquon Barkley,13
+2019,2,Markus,Christian McCaffrey,29
+2019,3,Tuan,Ezekiel Elliott,100
+2019,4,Jane,Alvin Kamara,16
+2019,5,Jaymond,Nick Chubb,0
+2019,6,Jason R.,DeAndre Hopkins,74
+2019,7,Vivian,Davante Adams,37
+2019,8,Eddie,David Johnson,1
+2019,9,Rich,Julio Jones,0
+2019,10,Eric Lew,James Conner,100
+2019,11,Emily,Michael Thomas,96
+2019,12,Andrew,Dalvin Cook,100
+2018,1,Tuan,Todd Gurley,16
+2018,2,Mars,Le'Veon Bell,0
+2018,3,Jason R.,Ezekiel Elliott,94
+2018,4,Emily,Antonio Brown,19
+2018,5,Jane,David Johnson,1
+2018,6,Markus,Saquon Barkley,80
+2018,7,Vivian,Alvin Kamara,0
+2018,8,Ryan,Kareem Hunt,9
+2018,9,Rich,DeAndre Hopkins,22
+2018,10,Oliver,Melvin Gordon III,27
+2018,11,Eddie,Odell Beckham Jr.,41
+2018,12,Eric Lew,Julio Jones,62
+2017,1,Alvin,David Johnson,0
+2017,2,Rich,Le'Veon Bell,5
+2017,3,Emily,Antonio Brown,18
+2017,4,Mars,Julio Jones,64
+2017,5,Eddie,LeSean McCoy,6
+2017,6,Markus,Odell Beckham Jr.,100
+2017,7,Jason R.,Mike Evans,76
+2017,8,Vivian,Devonta Freeman,61
+2017,9,Jane,Melvin Gordon III,0
+2017,10,Eric Chow,A.J. Green,3
+2017,11,Oliver,Jordy Nelson,45
+2017,12,Eric Lew,Jay Ajayi,100
+2016,1,Eddie,Antonio Brown,
+2016,2,Andrew,Odell Beckham Jr.,
+2016,3,Jeremy,Julio Jones,
+2016,4,Emily,Todd Gurley,
+2016,5,Vivian,David Johnson,
+2016,6,Eric Chow,Rob Gronkowski,
+2016,7,Jane,Ezekiel Elliott,
+2016,8,Rich,Lamar Miller,
+2016,9,Eric Lew,DeAndre Hopkins,
+2016,10,Alvin,A.J. Green,
+2016,11,Oliver,Brandon Marshall,
+2016,12,Jason R.,Adrian Peterson,
+2015,1,Eddie,Adrian Peterson,
+2015,2,Emily,Eddie Lacy,
+2015,3,Markus,Marshawn Lynch,
+2015,4,Rich,Le'Veon Bell,
+2015,5,Eric Chow,Rob Gronkowski,
+2015,6,Tuan,Jamaal Charles,
+2015,7,Andrew,Antonio Brown,
+2015,8,Jason R.,Demaryius Thomas,
+2015,9,Jane,Dez Bryant,
+2015,10,Eric Lew,Odell Beckham Jr.,
+2015,11,Vivian,Jeremy Hill,
+2015,12,Oliver,Julio Jones,
+2013,1,Eddie,Adrian Peterson,
+2013,2,Rich,Doug Martin,
+2013,3,Tuan,Marshawn Lynch,
+2013,4,Preston,C.J. Spiller,
+2013,5,Steve L.,LeSean McCoy,
+2013,6,Quang,Jamaal Charles,
+2013,7,Jason R.,Arian Foster,
+2013,8,Eric Chow,Calvin Johnson,
+2013,9,H.A.M.,Jimmy Graham,
+2013,10,Emily,Aaron Rodgers,
+2013,11,Bradley Y.,Alfred Morris,
+2013,12,Randall,Ray Rice,
+2012,1,Randall,Aaron Rodgers,
+2012,2,Bradley Y.,Drew Brees,
+2012,3,Preston,Tom Brady,
+2012,4,Rich,Arian Foster,
+2012,5,Eddie,Ray Rice,
+2012,6,Markus,LeSean McCoy,
+2012,7,Quang,Calvin Johnson,
+2012,8,Emily,Chris Johnson,
+2012,9,Jason R.,Matthew Stafford,
+2012,10,Tuan,Matt Forte,
+2012,11,Eric Chow,Cam Newton,
+2012,12,H.A.M.,Darren McFadden,
