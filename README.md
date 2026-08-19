@@ -1,6 +1,6 @@
 # Gatorade Showers league history
 
-This is a historical fantasy-football dashboard for the Gatorade Showers Yahoo league. It shows championship records, podium finishes, draft-lottery history, championship results by draft slot, and first-round player history.
+This is an interactive historical fantasy-football dashboard for the Gatorade Showers Yahoo league. It includes championship and podium exploration, a season-by-season league board, draft-lottery history, championship results by draft slot, first-round player history, and recorded-era FAAB analysis.
 
 The public site is expected at:
 
@@ -16,6 +16,8 @@ The website uses two small local data files:
 The original source is the Google Sheet named **Yahoo Fantasy Football League All Time Info**. The site does not connect to Google Sheets while visitors are using it, so it remains fast and simple on GitHub Pages.
 
 Historical names stay distinct. In particular, `Jane`, `Ryan`, and `Jane/Ryan` are separate identities. Any old `Richard` entry is displayed as `Rich` through the alias rule in `src/stats.js`; the source-history file does not need to be rewritten for that.
+
+FAAB analysis only uses seasons with a recorded `FAAB Remaining` value (currently 2017–2025). The Hit / Bust Lab intentionally remains unscored until validated player performance, games played, injury status, and scoring-format data are added; the dashboard never infers those outcomes from draft position alone.
 
 ## Annual update — the four steps to remember
 

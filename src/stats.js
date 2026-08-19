@@ -36,13 +36,14 @@ export function podiumStats(seasons) {
   const map = new Map()
   const touch = (rawName) => {
     const name = normalizeManager(rawName)
-    if (!map.has(name)) map.set(name, { manager: name, championships: 0, runnerUps: 0, thirds: 0, podiums: 0 })
+    if (!map.has(name)) map.set(name, { manager: name, championships: 0, runnerUps: 0, thirds: 0, podiums: 0, years: [], championshipYears: [], runnerUpYears: [], thirdYears: [] })
     return map.get(name)
   }
-  seasons.forEach(({ champion, runnerUp, third }) => {
-    touch(champion).championships += 1
-    touch(runnerUp).runnerUps += 1
-    touch(third).thirds += 1
+  seasons.forEach(({ year, champion, runnerUp, third }) => {
+    const championRow = touch(champion), runnerUpRow = touch(runnerUp), thirdRow = touch(third)
+    championRow.championships += 1; championRow.championshipYears.push(year); championRow.years.push(year)
+    runnerUpRow.runnerUps += 1; runnerUpRow.runnerUpYears.push(year); runnerUpRow.years.push(year)
+    thirdRow.thirds += 1; thirdRow.thirdYears.push(year); thirdRow.years.push(year)
   })
   map.forEach((entry) => { entry.podiums = entry.championships + entry.runnerUps + entry.thirds })
   return [...map.values()].sort((a, b) => b.championships - a.championships || b.podiums - a.podiums || a.manager.localeCompare(b.manager))
@@ -86,5 +87,42 @@ export function playerStats(rows) {
   const leaders = [...players.values()].map((entry) => ({ ...entry, managers: [...entry.managers], minPick: Math.min(...entry.picks), maxPick: Math.max(...entry.picks) }))
     .sort((a, b) => b.appearances - a.appearances || b.managers.length - a.managers.length || a.player.localeCompare(b.player))
   const repeats = [...pairs.values()].filter((pair) => pair.count > 1).sort((a, b) => b.count - a.count || a.manager.localeCompare(b.manager))
-  return { leaders, repeats }
+  const mostManagers = [...leaders].sort((a, b) => b.managers.length - a.managers.length || b.appearances - a.appearances || a.player.localeCompare(b.player))
+  return { leaders, repeats, mostManagers }
+}
+
+export function managerSeasonCounts(rows) {
+  const map = new Map()
+  rows.forEach(({ manager, year }) => {
+    if (!map.has(manager)) map.set(manager, new Set())
+    map.get(manager).add(year)
+  })
+  return new Map([...map].map(([manager, years]) => [manager, years.size]))
+}
+
+export function faabStats(rows) {
+  const recorded = rows.filter((row) => row.faab !== null)
+  const map = new Map()
+  recorded.forEach((row) => {
+    if (!map.has(row.manager)) map.set(row.manager, { manager: row.manager, values: [], seasons: [] })
+    const entry = map.get(row.manager)
+    entry.values.push(row.faab)
+    entry.seasons.push({ year: row.year, faab: row.faab })
+  })
+  const median = (values) => {
+    const sorted = [...values].sort((a, b) => a - b), middle = Math.floor(sorted.length / 2)
+    return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2
+  }
+  return [...map.values()].map((entry) => {
+    const average = entry.values.reduce((sum, value) => sum + value, 0) / entry.values.length
+    const style = average <= 25 ? 'Aggressive' : average <= 60 ? 'Balanced' : 'Conservative'
+    return {
+      ...entry,
+      average,
+      median: median(entry.values),
+      zeroSeasons: entry.values.filter((value) => value === 0).length,
+      highUnusedSeasons: entry.values.filter((value) => value >= 75).length,
+      style,
+    }
+  }).sort((a, b) => a.average - b.average || b.seasons.length - a.seasons.length || a.manager.localeCompare(b.manager))
 }
