@@ -126,3 +126,35 @@ export function faabStats(rows) {
     }
   }).sort((a, b) => a.average - b.average || b.seasons.length - a.seasons.length || a.manager.localeCompare(b.manager))
 }
+
+export const PERFORMANCE_GRADES = ['Smash Hit', 'Hit', 'Fine', 'Bust', 'Injury Bust']
+
+export function performanceStats(rows) {
+  const gradeCounts = Object.fromEntries(PERFORMANCE_GRADES.map((grade) => [grade, 0]))
+  const managers = new Map()
+  rows.forEach((row) => {
+    gradeCounts[row.grade] += 1
+    if (!managers.has(row.manager)) managers.set(row.manager, { manager: row.manager, picks: 0, smashHits: 0, hits: 0, top25: 0, busts: 0, injuryBusts: 0 })
+    const entry = managers.get(row.manager)
+    entry.picks += 1
+    if (row.grade === 'Smash Hit') entry.smashHits += 1
+    if (row.grade === 'Hit') entry.hits += 1
+    if (['Smash Hit', 'Hit', 'Fine'].includes(row.grade)) entry.top25 += 1
+    if (row.grade === 'Bust') entry.busts += 1
+    if (row.grade === 'Injury Bust') entry.injuryBusts += 1
+  })
+  const managerRows = [...managers.values()].map((row) => ({
+    ...row,
+    hitRate: row.picks ? ((row.smashHits + row.hits) / row.picks) * 100 : 0,
+    top25Rate: row.picks ? (row.top25 / row.picks) * 100 : 0,
+  })).sort((a, b) => b.hitRate - a.hitRate || b.top25Rate - a.top25Rate || b.picks - a.picks || a.manager.localeCompare(b.manager))
+  const total = rows.length
+  return {
+    total,
+    gradeCounts,
+    managerRows,
+    hitRate: total ? ((gradeCounts['Smash Hit'] + gradeCounts.Hit) / total) * 100 : 0,
+    top25Rate: total ? ((gradeCounts['Smash Hit'] + gradeCounts.Hit + gradeCounts.Fine) / total) * 100 : 0,
+    injuryRate: total ? (gradeCounts['Injury Bust'] / total) * 100 : 0,
+  }
+}
